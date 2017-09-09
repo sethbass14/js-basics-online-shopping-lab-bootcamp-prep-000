@@ -16,7 +16,7 @@ function addToCart(itemName) {
 }
 
 function viewCart() {
-  // write your code here
+  // This function has too much code! There must be a way to refactor. Getting around the grammar is tough.
   var string = "In your cart, you have "
   if (cart.length === 0) {
      string = "Your shopping cart is empty."
@@ -53,4 +53,10 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+  if (Number.isInteger(cardNumber)) {
+    console.log(`Your total cost is ${total(cart)}, which will be charge to the card ${cardNumber}.`)
+    cart = []
+  } else {
+    console.log("Sorry, we don't have a credit card on file for you.")
+  }
 }
