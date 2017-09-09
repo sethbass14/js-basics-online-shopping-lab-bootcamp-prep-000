@@ -30,7 +30,7 @@ function viewCart() {
     }
     string = string + `and ${Object.keys(cart[cart.length-1])} at $${cart[cart.length-1][Object.keys(cart[cart.length-1])]}.`
   }
-  console.log("Your shopping cart is empty.")
+  console.log(string)
 }
 
 function total() {
