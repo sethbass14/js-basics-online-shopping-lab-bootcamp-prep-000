@@ -16,7 +16,7 @@ function addToCart(itemName) {
 }
 
 function viewCart() {
-  // This function has too much code! There must be a way to refactor. Getting around the grammar is tough.
+  // It feels like this function has too much code! There must be a way to refactor. Getting around the grammar is tough.
   var string = "In your cart, you have "
   if (cart.length === 0) {
      string = "Your shopping cart is empty."
