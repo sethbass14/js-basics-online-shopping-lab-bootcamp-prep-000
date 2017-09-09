@@ -18,10 +18,12 @@ function addToCart(itemName) {
 function viewCart() {
   // write your code here
   string = "In your cart, you have "
-  for (var i = 1; i < cart.length, i++) {
-    if (i === cart.length - 1) {
-      string = string + ` and `
+  for (var i = 0; i < cart.length; i++) {
+    key = Object.keys(cart[i])
+    if (cart.length === 1) {
+      console.log(string = string + `${key} at ${cart[i][key]}`)
     }
+  }
 }
 
 function total() {
