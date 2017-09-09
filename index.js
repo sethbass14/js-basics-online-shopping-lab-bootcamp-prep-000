@@ -28,9 +28,9 @@ function viewCart() {
     for (var i = 0; i < cart.length - 1; i++) {
       string = string + `${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}, `
     }
+    string = string + `and $${Object.keys(cart[-1])} at $${cart[-1][Object.keys(cart[-1])]}.`
   }
-  
-  console.log(string)
+ return string
 }
 
 function total() {
