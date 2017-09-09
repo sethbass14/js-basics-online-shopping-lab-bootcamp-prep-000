@@ -18,12 +18,19 @@ function addToCart(itemName) {
 function viewCart() {
   // write your code here
   string = "In your cart, you have "
-  for (var i = 0; i < cart.length; i++) {
-    key = Object.keys(cart[i])
-    if (cart.length === 1) {
-      console.log(string = string + `${key} at ${cart[i][key]}`)
+  if (cart.length === 0) {
+    string = "Your shopping cart is empty."
+  } else if (cart.length === 1) {
+      string = string + `${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`
+  } else if (cart.length === 2) {
+      string = string + `${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]} and ${Object.keys(cart[1])} at $${cart[1][Object.keys(cart[1])]}.`
+  } else {
+    for (var i = 0; i < cart.length - 1; i++) {
+      string = string + `${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}, `
     }
   }
+  
+  console.log(string)
 }
 
 function total() {
