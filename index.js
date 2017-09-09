@@ -34,8 +34,11 @@ function viewCart() {
 }
 
 function total() {
-
-
+  var price = 0
+  for (var i = 0; i < cart.length; i++) {
+    price = price + cart[i][Object.keys(cart[i])]
+  }
+  return price
 }
 
 function removeFromCart(item) {
