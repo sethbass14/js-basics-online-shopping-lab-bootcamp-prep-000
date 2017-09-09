@@ -30,7 +30,7 @@ function viewCart() {
     }
     string = string + `and $${Object.keys(cart[cart.length-1])} at $${cart[cart.length-1][Object.keys(cart[cart.length-1])]}.`
   }
- return string
+  console.log(string)
 }
 
 function total() {
